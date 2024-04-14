@@ -22,9 +22,9 @@ class Alunos extends Model {
           default: "F",
         },
         foto_perfil: DataTypes.STRING,
-        telefone_1: DataTypes.STRING(20),
-        telefone_2: DataTypes.STRING(20),
-        bi: DataTypes.STRING(14),
+        telefone_1: DataTypes.STRING,
+        telefone_2: DataTypes.STRING,
+        bi: DataTypes.STRING,
         endereco: DataTypes.STRING,
         nascimento: DataTypes.DATE,
         senha: {

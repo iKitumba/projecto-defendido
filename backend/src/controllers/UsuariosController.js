@@ -93,6 +93,7 @@ class UsuariosController {
 
         return res.status(201).json({ usuario });
       } catch (error) {
+        console.log(error);
         return fs.unlink(
           path.resolve(
             __dirname,

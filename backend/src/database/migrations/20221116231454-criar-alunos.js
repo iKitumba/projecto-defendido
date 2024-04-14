@@ -32,14 +32,14 @@ module.exports = {
         type: Sequelize.STRING,
       },
       telefone_1: {
-        type: Sequelize.STRING(20),
+        type: Sequelize.STRING,
         allowNull: false,
       },
       telefone_2: {
-        type: Sequelize.STRING(20),
+        type: Sequelize.STRING,
       },
       bi: {
-        type: Sequelize.STRING(14),
+        type: Sequelize.STRING,
         allowNull: false,
       },
       endereco: {

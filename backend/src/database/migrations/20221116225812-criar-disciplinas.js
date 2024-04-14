@@ -16,7 +16,7 @@ module.exports = {
         unique: true,
       },
       diminuitivo: {
-        type: Sequelize.STRING(10),
+        type: Sequelize.STRING,
         unique: true,
         upperCase: true,
       },

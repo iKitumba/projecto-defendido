@@ -10,7 +10,7 @@ class Disciplinas extends Model {
           primaryKey: true,
         },
         titulo: DataTypes.STRING,
-        diminuitivo: DataTypes.STRING(10),
+        diminuitivo: DataTypes.STRING,
       },
       {
         sequelize,

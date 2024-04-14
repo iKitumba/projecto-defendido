@@ -11,7 +11,7 @@ module.exports = {
         primaryKey: true,
       },
       letra: {
-        type: Sequelize.STRING(1),
+        type: Sequelize.STRING,
         upperCase: true,
       },
       turno: {
@@ -19,7 +19,7 @@ module.exports = {
         allowNull: false,
       },
       classe: {
-        type: Sequelize.STRING(3),
+        type: Sequelize.STRING,
         allowNull: false,
       },
       curso_id: {

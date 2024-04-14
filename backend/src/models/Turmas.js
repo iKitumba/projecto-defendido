@@ -9,9 +9,9 @@ class Turmas extends Model {
           type: DataTypes.STRING,
           primaryKey: true,
         },
-        letra: DataTypes.STRING(1),
+        letra: DataTypes.STRING,
         turno: DataTypes.ENUM("MANHA", "TARDE", "NOITE"),
-        classe: DataTypes.STRING(3),
+        classe: DataTypes.STRING,
       },
       {
         sequelize,

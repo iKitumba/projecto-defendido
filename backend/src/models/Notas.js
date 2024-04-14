@@ -14,7 +14,7 @@ class Notas extends Model {
           allowNull: false,
         },
         nota_1: {
-          type: DataTypes.TINYINT(2),
+          type: DataTypes.INTEGER,
           validate: {
             min: 0,
             max: 20,
@@ -22,7 +22,7 @@ class Notas extends Model {
           defaultValue: 0,
         },
         nota_2: {
-          type: DataTypes.TINYINT(2),
+          type: DataTypes.INTEGER,
           validate: {
             min: 0,
             max: 20,
@@ -30,7 +30,7 @@ class Notas extends Model {
           defaultValue: 0,
         },
         nota_3: {
-          type: DataTypes.TINYINT(2),
+          type: DataTypes.INTEGER,
           validate: {
             min: 0,
             max: 20,

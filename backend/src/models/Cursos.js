@@ -11,7 +11,7 @@ class Cursos extends Model {
         },
         titulo: DataTypes.STRING,
         diminuitivo: {
-          type: DataTypes.STRING(10),
+          type: DataTypes.STRING,
           unique: {
             msg: "Já existe um curso com esse diminuítivo",
           },

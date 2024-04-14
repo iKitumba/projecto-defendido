@@ -2,7 +2,7 @@ const Alunos = require("../models/Alunos");
 const bcrypt = require("bcryptjs");
 const generateToken = require("../utils/generateToken");
 const { Op } = require("sequelize");
-const axios = require("axios");
+const SessaoController = require("../controllers/SessaoController");
 
 class SessaoParaTodos {
   async store(req, res) {
@@ -14,24 +14,13 @@ class SessaoParaTodos {
 
     const aluno = await Alunos.findOne({
       where: {
-        [Op.or]: [{ bi }, { id: bi }],
+        [Op.or]: [{ bi }, { id: Number(bi) || 1 }],
       },
     });
 
     if (!aluno) {
-      try {
-        const {
-          data: { usuario, token },
-        } = await axios.post(`${process.env.APP_URL}/usuarios/sessao`, {
-          username: bi,
-          senha,
-        });
-        return res.json({ usuario, token });
-      } catch (error) {
-        return res
-          .status(error?.response.status || 400)
-          .json(error?.response.data);
-      }
+      req.body.username = bi;
+      return SessaoController.store(req, res);
     }
 
     if (!(await bcrypt.compare(senha, aluno.senha))) {

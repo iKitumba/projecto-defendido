@@ -22,13 +22,13 @@ module.exports = {
         allowNull: false,
       },
       nota_1: {
-        type: Sequelize.TINYINT(2),
+        type: Sequelize.INTEGER,
       },
       nota_2: {
-        type: Sequelize.TINYINT(2),
+        type: Sequelize.INTEGER,
       },
       nota_3: {
-        type: Sequelize.TINYINT(2),
+        type: Sequelize.INTEGER,
       },
       aluno_id: {
         type: Sequelize.INTEGER,
